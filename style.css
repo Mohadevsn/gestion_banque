@@ -1,0 +1,74 @@
+.success{
+    background-color: greenyellow;
+    color: black;
+    text-align: center;
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 25%;
+    text-align: center;
+    justify-content: center;
+}
+.fail{
+    background-color: red;
+    color: black;
+    text-align: center;
+    width: 50%;
+    height: 5%;
+    border-radius: 5px;
+    margin-left: 25%;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.container{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1% ;
+    background-color: rgb(199, 69, 69);
+    width: 300px;
+    text-align: center;
+}
+
+.title{
+    font-size: 40px;
+    background-color: rgb(184, 59, 59);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.submit{
+    background-color: rgb(221, 103, 103);
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+
+}
+input{
+    background-color: rgb(175, 149, 149);
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+li a{
+    color: black;
+    font-style: normal;
+}
+.table{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 400px;
+    color: white;
+    background-color: rgb(217, 66, 66);
+}
