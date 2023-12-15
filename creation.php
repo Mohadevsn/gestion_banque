@@ -1,6 +1,12 @@
+<?php
+    define("TITLE", "Creation de compte client");
+?>
+
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <title><?php echo TITLE; ?></title>
+
 </head>
 <body>
     <h1 class="title">Bank of Liberty</h1>
@@ -8,8 +14,8 @@
         <ul>
             <li><a href="creation.php">Creation de compte</a></li>
             <li><a href="lecture.php">Liste des clients</a></li>
-            <li><a href="">Mettre a jour le solde</a></li>
-            <li><a href="">Supprimer un client</a></li>
+            <li><a href="update.php">Mettre a jour le solde</a></li>
+            <li><a href="delete.php">Supprimer un client</a></li>
         </ul>
     </nav>
 
@@ -73,6 +79,14 @@
                 Solde:<br><input type="number" name="solde"><br>
                 <input type="submit" value="Envoyer" name="submit" class="submit"><br>
             </form>
+        </div>
+
+        <div class="footer">
+            <?php 
+                $year = date('Y');
+                $creator = "Mohamed Wade";
+                echo "$creator &copy $year" ;
+            ?>
         </div>
 </body>
 </html>

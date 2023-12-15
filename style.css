@@ -1,8 +1,13 @@
+body{
+    
+    margin: 0;
+}
+
 .success{
     background-color: greenyellow;
     color: black;
     text-align: center;
-    width: 50px;
+    width: 50%;
     border-radius: 5px;
     margin-left: 25%;
     text-align: center;
@@ -31,13 +36,14 @@
     background-color: rgb(199, 69, 69);
     width: 300px;
     text-align: center;
+    border-radius: 15px;
 }
 
 .title{
     font-size: 40px;
     background-color: rgb(184, 59, 59);
     text-align: center;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .submit{
@@ -71,4 +77,16 @@ li a{
     width: 400px;
     color: white;
     background-color: rgb(217, 66, 66);
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-right: 0px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(184, 59, 59);
+    font-size: 15px;
 }

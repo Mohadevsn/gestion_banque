@@ -1,7 +1,11 @@
+<?php
+    define("TITLE", "Liste des clients");
+?>
+
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-
+        <title><?php echo TITLE ; ?></title>
     </head>
     <body>
         <h1 class="title">Bank of Liberty</h1>
@@ -9,8 +13,8 @@
             <ul>
                 <li><a href="creation.php">Creation de compte</a></li>
                 <li><a href="lecture.php">Liste des clients</a></li>
-                <li><a href="">Mettre a jour le solde</a></li>
-                <li><a href="">Supprimer un client</a></li>
+                <li><a href="update.php">Mettre a jour le solde</a></li>
+                <li><a href="delete.php">Supprimer un client</a></li>
             </ul>
         </nav>
 
@@ -37,7 +41,16 @@
             $chaine = $chaine."</table></div>";
 
             print($chaine);
+            mysqli_close($conn);
 
         ?>
+
+        <div class="footer">
+            <?php 
+                $year = date('Y');
+                $creator = "Mohamed Wade";
+                echo "$creator $year &copy" ;
+            ?>
+        </div>
     </body>
 </html>
