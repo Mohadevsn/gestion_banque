@@ -1,5 +1,11 @@
 <?php
     define("TITLE", "Liste des clients");
+    session_start();
+    // Check if the user is not logged in
+    if (!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])) {
+        header("Location: index.php");
+        exit();
+        }
 ?>
 
 <html>
@@ -38,7 +44,7 @@
             mysqli_close($conn);
 
         ?>
-        
+
         <?php
             include('includes/footer.php');
         ?>

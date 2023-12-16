@@ -1,5 +1,12 @@
 <?php
     define("TITLE", "Mise à jour de solde");
+    session_start();
+    // Check if the user is not logged in
+    if (!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])) {
+        header("Location: index.php");
+        exit();
+        }
+
 ?>
 
 <html>

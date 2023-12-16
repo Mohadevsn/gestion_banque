@@ -1,5 +1,14 @@
 <?php
     define("TITLE", "Creation de compte client");
+    session_start();
+
+    // Check if the user is not logged in
+    if (!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])) {
+    header("Location: index.php");
+    exit();
+    }
+
+
 ?>
 
 <html>
