@@ -8,17 +8,10 @@
     </head>
     <body>
 
-    <h1 class="title">Bank of Liberty</h1>
-    <nav>
-        <ul>
-            <li><a href="creation.php">Creation de compte</a></li>
-            <li><a href="lecture.php">Liste des clients</a></li>
-            <li><a href="update.php">Mettre a jour le solde</a></li>
-            <li><a href="delete.php">Supprimer un client</a></li>
-        </ul>
-    </nav>
-
-        <div class="container">
+        <?php
+            include('includes/header.php');
+        ?>
+    <div class="container">
 
             <?php
                 $error = array();
@@ -48,23 +41,12 @@
                                  mysqli_close($conn);   
                             }
                     }
-
-                
-            
             ?>
             <form action="delete.php" method="POST">
                 Numero de compte:<br><input type="number" name="numerocompte"><br>
                 <input type="checkbox" name="agree" id="agree">Vous confirmez vouloir supprimer ce compte<br>
                 <input type="submit" value="Supprimer" name="submit" class="submit">
             </form>
-        </div>
-
-        <div class="footer">
-            <?php 
-                $year = date('Y');
-                $creator = "Mohamed Wade";
-                echo "$creator &copy $year" ;
-            ?>
         </div>
         
     </body>
