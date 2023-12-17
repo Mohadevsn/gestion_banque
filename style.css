@@ -53,7 +53,10 @@ body{
     margin-top: 10px;
     width: 100px;
     height: 40px;
-
+}
+.submit:hover{
+    background-color: rgb(179, 55, 55);
+    cursor: pointer;
 }
 input{
     background-color: rgb(175, 149, 149);
@@ -64,11 +67,17 @@ ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    
+
 }
 li a{
     color: black;
     font-style: normal;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid red;
+    background-color: rgb(221, 103, 103);
+    margin-top: 30px;
+
 }
 .table{
     position: absolute;
@@ -93,4 +102,10 @@ li a{
 .welcome{
     float: right;
     background-color: rgb(199, 69, 69);
+}
+.deconnection{
+    color: red;
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: black;
 }

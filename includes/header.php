@@ -5,7 +5,7 @@
         <li><a href="lecture.php">Liste des clients</a></li>
         <li><a href="update.php">Mettre a jour le solde</a></li>
         <li><a href="delete.php">Supprimer un client</a></li>
-        <li><a href="logout.php">Deconnection</a></li>
+        <li><a href="logout.php" class="deconnection">Deconnection</a></li>
     </ul>
 </nav>
 <h2>
