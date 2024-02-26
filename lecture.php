@@ -10,7 +10,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        
         <title><?php echo TITLE ; ?></title>
     </head>
     <body>
@@ -27,7 +27,7 @@
             $result = mysqli_query($conn, $sql);
             $tab = mysqli_fetch_all($result);
 
-            $chaine = "<div class=\"table\"><table border='1px' ><tr><td>Prenom</td><td>Nom</td><td>Code</td><td>Numero de compte</td><td>Solde</td></tr>";
+            $chaine = "<table border='1px' class=\"table table-ml\"><thead><tr><th scope=\"col\">Prenom</th><th scope=\"col\">Nom</th><th scope=\"col\">Code</th><th scope=\"col\">Numero de compte</th><th scope=\"col\">Solde</th></tr></thead><tbody>";
 
             foreach($tab as $line){
                 $prenom = $line[1];
@@ -36,9 +36,9 @@
                 $numcompte = $line[4];
                 $solde = $line[5];
                 
-                $chaine = $chaine."<tr><td>$prenom</td><td>$nom</td><td>$code</td><td>$numcompte</td><td>$solde</td></tr>";
+                $chaine = $chaine."<tr><td scope=\"row\">$prenom</td><td>$nom</td><td>$code</td><td>$numcompte</td><td>$solde</td></tr>";
             }
-            $chaine = $chaine."</table></div>";
+            $chaine = $chaine."</tbody></table></div>";
 
             print($chaine);
             mysqli_close($conn);

@@ -3,6 +3,10 @@ body{
     margin: 0;
 }
 
+.navbar{
+    margin-left: 50%;
+}
+
 .success{
     background-color: greenyellow;
     color: black;
@@ -26,18 +30,7 @@ body{
     
 }
 
-.container{
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1% ;
-    background-color: rgb(199, 69, 69);
-    width: 300px;
-    text-align: center;
-    border-radius: 15px;
-}
+
 
 .title{
     font-size: 40px;
@@ -63,27 +56,7 @@ input{
     border-radius: 10px;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
 
-}
-li{
-    margin-bottom: 10px;
-}
-li a{
-    color: black;
-    font-style: normal;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    border: 1px solid red;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: rgb(221, 103, 103);
-    margin-top: 30px;
-
-}
 a:hover{
     color: red;
     border: 1px solid black;
@@ -98,17 +71,6 @@ a:hover{
     background-color: rgb(217, 66, 66);
 }
 
-.footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-right: 0px;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 15px;
-    background-color: rgb(184, 59, 59);
-    font-size: 15px;
-}
 .welcome{
     float: right;
     background-color: rgb(199, 69, 69);
@@ -125,4 +87,14 @@ a:hover{
     color: black;
     border: 1px solid black;
     background-color: red;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(114, 2, 2);
+    color: white;
+    text-align: center;
 }

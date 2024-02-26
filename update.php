@@ -11,7 +11,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        
         <title><?php echo TITLE;?></title>
     </head>
     <body>
@@ -56,9 +56,19 @@
                 
         ?>
             <form action="update.php" method="POST">
-                Numero de compte:<br></compte:br><input type="number" name="numcompte"><br>
-                Nouveau solde:<br></compte:br><input type="number" name="nouveausolde"><br>
-                <input type="submit" value="Envoyer" name="submit" class="submit"><br>
+                <div class="form-floating">
+                    <input type="number" name="numcompte" class="form-control" placeholder="Numero compte">
+                    <label class="label-form">Numero de compte:</label>
+                </div>
+                <br>
+
+                <div class="form-floating">
+                    <input type="number" name="nouveausolde" class="form-control" placeholder="nouveau solde">
+                    <label class="label-form">Nouveau solde:</label>
+                </div>
+                <br>
+                <br>
+                <input type="submit" value="Envoyer" name="submit" class="btn btn-success"><br>
             </form>
         </div>
 

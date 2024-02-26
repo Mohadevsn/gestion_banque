@@ -10,7 +10,7 @@
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        
         <title><?php echo TITLE;?></title>
     </head>
     <body>
@@ -50,11 +50,25 @@
                     }
             ?>
             <form action="delete.php" method="POST">
-                Numero de compte:<br><input type="number" name="numerocompte"><br>
-                <input type="checkbox" name="agree" id="agree">Vous confirmez vouloir supprimer ce compte<br>
-                <input type="submit" value="Supprimer" name="submit" class="submit">
+                <div class="form-floating">
+                    <input type="number" name="numerocompte" class="form-control" placeholder="number"><br>
+                    <label class="label-form">Numero de compte:<br></label>
+                    
+                </div>
+                
+                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="agree" autocomplete="off" name="agree">
+                        <label class="btn btn-outline-danger" for="agree">Vous confirmez vouloir supprimer ce compte</label>
+                    </div>
+
+                    <br>
+                    <br>
+                <input type="submit" value="Supprimer" name="submit" class="btn btn-danger">
             </form>
         </div>
         
+        <?php
+            include('includes/footer.php');
+        ?>
     </body>
 </html>
