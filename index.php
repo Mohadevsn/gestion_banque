@@ -5,8 +5,10 @@
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        
         <title><?php echo TITLE;?></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </head>
     <body>
         <?php
@@ -27,7 +29,7 @@
                     }
                     if(count($error) >0){
                         foreach($error as $errors){
-                            echo "<p class=\"fail\">$errors</p>";
+                            echo "<p class=\"bg-warning\">$errors</p>";
                         }
                     }else
                     {
@@ -63,12 +65,27 @@
             ?>
 
 
-            <h1>Administrateur connection</h1>
-            <form action="" method="POST">
-                Username:<br><input type="text" name="username" ><br>
-                Mot de passe:<br><input type="password" name="password"><br>
-                <input type="submit" value="Se connecter" name="submit" class="submit">
-            </form>
+            <div class="container bg-danger">
+                <h1>Administrateur connection</h1>
+                <form action="" method="POST" novalidate >
+                    <div class="form-floating">
+                
+                        <input type="text" name="username" class="form-control form-control-sm" placeholder="enter your username">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="invalid-feedback">
+                            Veuillez renseigner le username
+                        </div>
+                    </div>
+                
+                    <div class="form-floating">
+                        <input type="password" name="password" class="form-control form-control-sm" placeholder="enter your password" required>
+                        <label for="password" class="form-label">Mot de passe</label>
+                    </div>
+                
+                        <input type="submit" value="Se connecter" name="submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
         </div>
         <?php
             include('includes/footer.php');

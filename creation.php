@@ -13,7 +13,10 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
     <title><?php echo TITLE; ?></title>
 
 </head>
@@ -22,7 +25,7 @@
             include('includes/header.php');
         ?>
     
-        <div class="container">
+        <div class="container" >
             <?php
             if(isset($_POST["submit"])){
                 $prenom = $_POST["prenom"];
@@ -74,13 +77,38 @@
             
             }
             ?>
-            <form action="creation.php" method="POST">
-                Prenom:<br></Prenom:br><input type="text" name="prenom"><br>
-                Nom:<br><input type="text" name="nom"><br>
-                code:<br><input type="number" name="code"><br>
-                Numero de compte:<br><input type="number" name="numerocompte"><br>
-                Solde:<br><input type="number" name="solde"><br>
-                <input type="submit" value="Envoyer" name="submit" class="submit"><br>
+            <form action="creation.php" method="POST" >
+
+                    <div class="form-floating">
+                        <input type="text" name="prenom" placeholder="enter the prenom" class="form-control">
+                        <label for="prenom" class="label-form">Prenom</label>
+                    </div>
+
+                    
+                    <div class="form-floating">
+                        <input type="text" name="nom" placeholder="enter the prenom" class="form-control">
+                        <label for="nom" class="label-form">Nom</label>
+                    </div>
+
+                    
+                    <div class="form-floating">
+                        <input type="number" name="code" placeholder="enter the prenom" class="form-control">
+                        <label for="code" class="label-form">code</label>
+                    </div>
+
+                   
+                    <div class="form-floating">
+                        <input type="number" name="numerocompte" placeholder="enter the prenom" class="form-control">
+                        <label for="code" class="label-form">Numero de compte</label>
+                    </div>
+
+                    
+                    <div class="form-floating">
+                        <input type="number" name="solde" placeholder="enter the prenom" class="form-control">
+                        <label for="solde" class="label-form">Solde</label>
+                    </div>
+
+                    <input type="submit" value="Envoyer" name="submit" class="btn btn-success">
             </form>
         </div>
 
